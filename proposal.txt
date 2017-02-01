@@ -1,0 +1,64 @@
+Write a short paragraph (or two) describing the project you like to create. 
+Feel free to provide a list of features. The project should be a web 
+application. Once you create the proposal, drop an email to Venkat asking him 
+to review your proposal. He will let you know if more details are needed, if 
+scope has to be changed. The final demo by your team will be in class on July 
+7th.
+
+Demo: July 7th in class
+Final code review: July 7th
+Project repository access available until 11:59PM July 9th
+------------------------------------------------------------------------------
+
+Synopsis : 
+------------
+We plan to create a twitter like web application. It will let users sign up and create accounts.
+Registered users can post short messages (text or pictures) and have the ability to edit and/or delete
+already posted messages.
+
+APP Name:
+----------
+CHIRPP 
+
+Functionality Included:
+------------------------
+User Management
+  1. User Login 
+  2. User Creation
+  
+Listing Page - No login required
+  3. Listing Page to show all chirps for a day 
+
+Chirp CRUD Pages - Login Required
+  4. Create chirp
+  5. Edit chirp
+  6. Delete chirp
+  7. List chirp for logged in user
+
+Functionality not in scope
+---------------------------
+- Email notification to users  
+- No separate service or API to extract chirps. User will have to access web to view chirps.
+  
+Technology
+------------
+1) Development Language: Ruby on Rails
+2) Backend : SQLite3
+
+
+Total [30]: 27
+Your program works [10 pts]: -3
+One user was able to view the profile page for another user and in the process gain access to the other users phone number.
+
+User should be able to view all the chirps when they are logged in, not just their own chirps.
+
+Code quality [5 pts]:
+
+Design quality [5 pts]:
+
+Code coverage through automated tests [5 pts]:
+Model level tests [2]:
+Controller level tests [2]:
+Integration tests [1]:
+
+Demo [5 pts]: -1

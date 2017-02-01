@@ -1,0 +1,29 @@
+<h2>Chirpps</h2>
+<ul id="errorList" >
+</ul>
+<%= render 'chirpp_add_form' %>
+<hr>
+<h3>Story so far</h3>
+<ul id="editErrorList" >
+</ul>
+<p><table id="chirptable" width="700">
+	<% @chirpps.each do |chirp| %>
+	<%= render :partial => 'chirpp_table_row', :locals => {:chirp => chirp } %>
+	<% end %>
+</table></p>
+<br>
+<%= javascript_tag do %>
+	$( document ).ready(function() {
+        $('#home').remove();
+    	$('#login').remove();
+    	$('#signup').remove();
+        $('#about').remove();
+        $('#contact').remove();
+    	if ($('#logout').length == 0) {
+    		$('#navigation').prepend('<li id="logout"><%= link_to_unless_current 'Log Out', :controller=>"userlogins", :action => "logout", :method => "get"%></li>');}
+        if ($('#profile').length == 0) {
+    	   $('#navigation').prepend('<li id="profile"><%= link_to_unless_current 'Profile', edit_userprofile_path(session[:current_user_id]) %></li>');}
+        if ($('#home').length == 0) {
+            $('#navigation').prepend('<li id="home"><%= link_to_unless_current 'Home', :controller=>"chirpps", :action => "index", :method => "get"%></li>');}
+	});
+<% end %>

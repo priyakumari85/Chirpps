@@ -1,0 +1,32 @@
+<ul id="errorList" >
+</ul>
+<label id="successMessage"></label>
+  <%= form_for @user, :remote => true do |f| %>
+    <p><%= label_tag(:username, "User Name*:") %>
+    <%= text_field_tag(:username) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= label_tag(:password, "Password*:") %>
+    <%= password_field_tag(:password) %></p>
+    <hr>
+    <p> First Name*:<%= f.text_field :first%> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Last Name*:<%= f.text_field :last%> </p>
+
+    <p> Email*: <%= f.text_field :email%> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Phone*: <%= f.text_field :phone%> </p>
+
+    <hr>
+
+    <p> Address Line 1*:<%= f.text_field :addline1%> &nbsp;&nbsp;
+     Address Line 2 <%= f.text_field :addline2%></p>
+
+    <p> Street*: <%= f.text_field :street%>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    City*:<%= f.text_field :city%></p> 
+
+    <p> Country*: <%= f.text_field :country%>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Pincode*: <%= f.text_field :pincode%></p>
+
+    <%= f.submit %>
+  <% end %>

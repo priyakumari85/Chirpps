@@ -1,0 +1,4 @@
+<%= form_for @chirp, :remote => true do |form| %>
+  &nbsp;&nbsp;&nbsp;&nbsp;<%= form.text_field :content, :size => 100 %><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;<%= form.submit %>
+<% end %>

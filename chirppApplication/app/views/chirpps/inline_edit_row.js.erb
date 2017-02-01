@@ -1,0 +1,2 @@
+var newrow = '<tr><td><%= form_for @chirp, :remote => true do |form| %><%= form.text_field :content, :size => 60 %><%= form.submit('Save') %><% end %></td></tr>';
+$('#<%= @chirp.id%>').html(newrow);

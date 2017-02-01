@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  first: 'John'
+  last: 'Doe'
+  email: 'jdoe@email.com'
+  phone: 4049746590
+  addline1: 'west aiprt blvd'
+  addline2: ''
+  street: 'Street1'
+  city: 'SugarLand'
+  country: 'USA'
+  pincode: '77498'
+
+two:
+  id: 2
+  first: 'Jane'
+  last: 'Doe'
+  email: 'janedoe@email.com'
+  phone: 4049746591
+  addline1: 'west aiprt blvd'
+  addline2: ''
+  street: 'Street1'
+  city: 'SugarLand'
+  country: 'USA'
+  pincode: '77498'

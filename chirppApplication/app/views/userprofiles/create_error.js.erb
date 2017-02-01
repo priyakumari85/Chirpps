@@ -1,0 +1,8 @@
+$('#errorList li').remove();
+ <% @user.errors.full_messages.each do |message| %>
+	  $('#errorList').append('<li><%= message.humanize %></li>');
+ <% end %>
+ 
+ <% @user_login.errors.full_messages.each do |message| %>
+	  $('#errorList').append('<li><%= message.humanize %></li>');
+ <% end %>

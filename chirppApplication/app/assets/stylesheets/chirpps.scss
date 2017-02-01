@@ -1,0 +1,39 @@
+// Place all the styles related to the Chirpps controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+table { 
+  table-layout:fixed;
+   box-sizing: border-box; 
+   border-bottom: 1px solid #e8e8e8; 
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+   font-size: 13px;
+   font-style: italic;
+}
+table tbody tr:hover {
+   background-color:#FFC7EA;
+   color:#ffffff;
+   text-shadow: 1px 2px #000000;
+   box-shadow: 0px 0px 10px #ff0000;
+   -webkit-box-shadow: 0px 0px 10px #ff0000;
+   -moz-box-shadow: 0px 0px 10px #ff0000;
+}
+ td, th { 
+    padding-left: 16px; 
+    min-width: 20px; 
+    text-align: left; 
+    word-wrap:break-all;
+}
+tr { 
+    display: block; 
+    word-wrap:break-word;
+}
+table tbody tr , table tbody td{
+    word-wrap:break-word;
+} 
+table#chirptable tr:nth-of-type(even){
+    background-color: #F8F8FF;
+    word-wrap:break-word;
+}
+.createdtd {
+  font-size: 8px;
+}

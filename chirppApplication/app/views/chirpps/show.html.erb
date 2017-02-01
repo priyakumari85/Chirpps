@@ -1,0 +1,14 @@
+<b>All Tweets !!!!!!!!</b>
+<table id="chirptable" width="700">
+	<tr><th></th><th></th></tr>
+	<% @chirpps.each do |chirp| %>
+	<%= render :partial => 'chirpp_table_noneditrow', :locals => {:chirp => chirp } %>
+	<% end %>
+</table>
+<br>
+<%= javascript_tag do %>
+	$( document ).ready(function() {
+    	$('#logout').remove();
+    	$('#profile').remove();
+	});
+<% end %>

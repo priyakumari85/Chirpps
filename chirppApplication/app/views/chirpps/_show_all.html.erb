@@ -1,0 +1,10 @@
+<% if @other_chirpps %>
+	<h2>Other Chirpps</h2>
+	<table id="chirptable" width="340">
+		<% @other_chirpps.each do |chirp| %>
+		<%= render :partial => 'chirpp_table_noneditrow', :locals => {:chirp => chirp } %>
+		<% end %>
+	</table>
+<% else %> 
+	<h2>Welcome to the Chirpps</h2>
+<% end %>

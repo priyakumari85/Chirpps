@@ -1,0 +1,35 @@
+<h2>Edit Profile</h2>
+<ul id="errorList" >
+</ul>
+<label id="successMessage"></label>
+  <%= form_for( @user, remote: true, :url => {:controller => 'userprofiles', :action => 'update', :id => session[:current_user_id]}) do |f| %>
+    <p><%= label_tag(:username, "User Name*:") %>
+    <%= text_field_tag 'username', @username %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= label_tag(:password, "Password*:") %>
+    <%= password_field_tag 'password', @password  %></p>
+    <hr>
+    <p> First Name*:<%= f.text_field :first%> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Last Name*:<%= f.text_field :last%> </p>
+
+    <p> Email*: <%= f.text_field :email%> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Phone: <%= f.text_field :phone%> </p>
+
+    <%= f.submit %>
+  <% end %>
+<%= javascript_tag do %>
+	$( document ).ready(function() {
+        $('#home').remove();
+    	$('#login').remove();
+    	$('#signup').remove();
+        $('#about').remove();
+        $('#contact').remove();
+    	if ($('#logout').length == 0) {
+    		$('#navigation').prepend('<li id="logout"><%= link_to_unless_current 'Log Out', :controller=>"userlogins", :action => "logout", :method => "get"%></li>');}
+        if ($('#profile').length == 0) {
+    	   $('#navigation').prepend('<li id="profile"><%= link_to_unless_current 'Profile', edit_userprofile_path(session[:current_user_id]) %></li>');}
+        if ($('#home').length == 0) {
+            $('#navigation').prepend('<li id="home"><%= link_to_unless_current 'Home', :controller=>"chirpps", :action => "index", :method => "get"%></li>');}
+	});
+<% end %>

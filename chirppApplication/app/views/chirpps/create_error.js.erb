@@ -1,0 +1,5 @@
+$('#errorList li').remove();
+$('#editErrorList li').remove();
+ <% @chirp.errors.full_messages.each do |message| %>
+	  $('#errorList').append('<li><%= message.humanize %></li>');
+ <% end %>

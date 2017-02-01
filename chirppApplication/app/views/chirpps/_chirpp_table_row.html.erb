@@ -1,0 +1,1 @@
+<tr id="<%= chirp.id%>"><td><%= chirp.content %></td><td><%= link_to 'Edit', :controller=>"chirpps", :action => "edit",  :id =>chirp.id, :remote => true %></td><td><%= link_to 'Delete', chirpp_path(chirp), method: 'delete', data: { confirm: "You sure?" } %></td></tr>

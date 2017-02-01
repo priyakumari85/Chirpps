@@ -1,0 +1,4 @@
+$('#errorList li').remove();
+ <% @errors.each do |key,message| %>
+	  $('#errorList').append('<li><%= message.humanize %></li>');
+ <% end %>

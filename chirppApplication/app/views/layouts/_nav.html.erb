@@ -1,0 +1,10 @@
+ <nav>
+   <ul id="navigation">     
+	 <li id="login"> <%= link_to_unless_current 'Login', new_userlogin_path %></li>
+     <li id="signup"><%= link_to_unless_current 'Sign Up', new_userprofile_path %></li>
+     <li id="home"><%= link_to_unless_current 'Home', :controller=>"chirpps", :action => "show", :method => "get" %></li>
+     <hr>
+     <li id="about"><%= link_to 'About Us' , static_pages_about_path %></li>
+     <li id="contact"><%= link_to 'Contact Us', static_pages_contact_path %></li>
+   </ul>
+ </nav>

@@ -1,0 +1,6 @@
+<ul id="msgList" >
+</ul>
+<%= form_for @chirp, :remote => true do |form| %>
+  <%= form.text_field :content, :size => 100 %><br>
+  <%= form.submit %>
+<% end %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: 'jaky'
+  password: "Abcde@123"
+  user_profile_id: 1
+
+two:
+  username: 'taso'
+  password: 'Abcde@123'
+  user_profile_id: 2

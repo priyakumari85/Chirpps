@@ -1,0 +1,25 @@
+<% @page_title = "UserAuth | Signup" %>
+
+<ul id="errorList" >
+</ul>
+<label id="successMessage"></label>
+  <h1>Sign Up</h1>
+  <%= form_for( @user, :remote => true, :url => {:controller => 'userprofiles', :action => 'create'}) do |f| %>
+    <p><%= label_tag(:username, "User Name*:") %>
+    <%= text_field_tag(:username) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= label_tag(:password, "Password*:") %>
+    <%= password_field_tag(:password) %></p>
+    <hr>
+    <p> First Name*:<%= f.text_field :first%> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Last Name*:<%= f.text_field :last%> </p>
+
+    <p> Email*: <%= f.text_field :email%> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Phone: <%= f.text_field :phone%> </p>
+
+    <hr>
+
+   
+    <%= f.submit :Signup %>
+  <% end %>
